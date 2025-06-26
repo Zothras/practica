@@ -12,7 +12,7 @@ namespace practica
 
         public override string obtener_descripcion()
         {
-            return Principal.ToString();
+            return $"{base.obtener_descripcion()} tema principal: {Principal}";
         }
     }
 }

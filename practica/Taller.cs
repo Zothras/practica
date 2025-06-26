@@ -9,11 +9,11 @@ namespace practica
 {
     public class Taller : Evento
     {
-        public int CapacidadMaxima { get; set; }
+        public int CapacidadMaxima = 2;
 
         public override string obtener_descripcion()
         {
-            return CapacidadMaxima.ToString();
+            return $"{base.obtener_descripcion} la capacidad maxima es {CapacidadMaxima}";
 
 
         }

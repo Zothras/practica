@@ -11,10 +11,9 @@ namespace practica
         public string Nombre { get; set;}
         public string Apellido { get; set;}
 
-        public void obtener_nombre_completo()
+        public string obtener_nombre_completo()
         {
-
-            
+            return Nombre + Apellido.ToString();
         }
     }
 }

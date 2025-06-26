@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace practica
 {
-    public abstract class Evento
+    public class Evento
     {
         public string Nombre { get; set; }
         public string Fecha { get; set; }
@@ -14,14 +14,20 @@ namespace practica
 
         public List<Participante> Participante { get; set; } = new();
 
-        public abstract string obtener_descripcion();
+        public virtual string obtener_descripcion()
 
         
+          {
+            return $"{Nombre}, ën la fecha {Fecha}, en su ubicacion {Ubicacion}";
+
+
+        }
         
 
         public void Inscribir_Participante(Participante participante)
         {
             Participante.Add(participante);
+
         
         }
     }
